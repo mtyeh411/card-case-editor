@@ -16,9 +16,9 @@ Open a web browser to `http://localhost:8000/jcard-template/` to access the
 site.
 
 ## Licensing
-Source in this repository is licensed under the MIT License, see "LICENSE" for
+Source in this repository is licensed under the MIT License, see `LICENSE` for
 details.
 
 ### Fonts
-Fonts in the "static/fonts" directory were created by Yann Le Coroller and
-are released under a custom license, see "static/fonts/LICENSE" for details.
+Fonts in the `static/fonts` directory were created by Yann Le Coroller and
+are released under a custom license, see `static/fonts/LICENSE` for details.
