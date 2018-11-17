@@ -3,6 +3,7 @@
 for cassette tape J-Cards built using [Jekyll](https://jekyllrb.com/) and
 hosted using [GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/).
 
+
 ## Testing
 You will need to [install Jekyll](https://jekyllrb.com/docs/installation/)
 before you can serve the site on your local machine. Run the following to
@@ -15,9 +16,10 @@ $ jekyll serve
 Open a web browser to `http://localhost:8000/jcard-template/` to access the
 site.
 
+
 ## Licensing
-Source in this repository is licensed under the MIT License, see `LICENSE` for
-details.
+Source in this repository is licensed under the GNU General Public License v3.0
+(GNU GPLv3), see `LICENSE` for details.
 
 ### Fonts
 Fonts in the `static/fonts` directory were created by Yann Le Coroller and
