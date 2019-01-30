@@ -18,7 +18,7 @@ site.
 
 
 ## Licensing
-Source in this repository is licensed under the 2-clause BSD licnese, see
+Source in this repository is licensed under the 2-clause BSD license, see
 `LICENSE` for details.
 
 ### Fonts
