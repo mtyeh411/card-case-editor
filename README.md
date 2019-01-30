@@ -18,8 +18,8 @@ site.
 
 
 ## Licensing
-Source in this repository is licensed under the GNU General Public License v3.0
-(GNU GPLv3), see `LICENSE` for details.
+Source in this repository is licensed under the 2-clause BSD licnese, see
+`LICENSE` for details.
 
 ### Fonts
 Fonts in the `static/fonts` directory were created by Yann Le Coroller and
