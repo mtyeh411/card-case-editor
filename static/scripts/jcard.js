@@ -5,6 +5,8 @@ var jcard = (function() {
     // find input elements in the controls module
     function findInputs(controls) {
         return {
+            hideCover:  controls.querySelector('#controls-hide-text-cover'),
+            fullCover:  controls.querySelector('#controls-full-bleed-cover'),
             print2:     controls.querySelector('#controls-print-2'),
             forceCaps:  controls.querySelector('#controls-force-caps'),
             shortBack:  controls.querySelector('#controls-short-back'),
@@ -42,7 +44,7 @@ var jcard = (function() {
                 template.querySelector('.template-spine-title-group')],
             titles:         [
                 template.querySelector('.template-front-title'),
-                template.querySelector('.template-spine-title')],    
+                template.querySelector('.template-spine-title')],
             subtitles:      [
                 template.querySelector('.template-front-subtitle'),
                 template.querySelector('.template-spine-subtitle')],
@@ -63,6 +65,8 @@ var jcard = (function() {
 
     // add listeners to inputs that update j-card outputs
     function addJCardListeners(inputs, outputs) {
+        addToggleListener(inputs.hideCover, outputs.root, 'front-text-hidden');
+        addToggleListener(inputs.fullCover, outputs.root, 'full-bleed-cover');
         addToggleListener(inputs.shortBack, outputs.root, 'short-back');
         addToggleListener(inputs.forceCaps, outputs.root, 'force-caps');
 

@@ -118,6 +118,7 @@ $template-track-line-height: 1.2;
         height: $template-front-width;
         object-fit: cover;
     }
+
     &-front-group {
         $template-front-group-height: $template-height - $template-front-width;
 
@@ -166,4 +167,20 @@ $template-track-line-height: 1.2;
 
     // force all caps
     &.force-caps { text-transform: uppercase; }
+
+    // full-bleed cover
+    &.full-bleed-cover &-cover {
+      height: $template-height !important;
+    }
+    &.full-bleed-cover &-front-group {
+      background: rgba(255,255,255,0.5);
+      position: absolute;
+      bottom: 0;
+    }
+    &.full-bleed-cover &-front {
+      position: relative;
+    }
+    &.front-text-hidden &-front-group {
+      display: none;
+    }
 }

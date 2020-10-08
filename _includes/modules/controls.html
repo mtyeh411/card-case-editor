@@ -22,6 +22,14 @@
                         {% include modules/field.html id="controls-print-2" type="checkbox" label="Print 2" %}
                     </div>
                 </div>
+                <div class="columns">
+                    <div class="columns-column">
+                        {% include modules/field.html id="controls-full-bleed-cover" type="checkbox" label="Full-bleed Cover" %}
+                    </div>
+                    <div class="columns-column">
+                        {% include modules/field.html id="controls-hide-text-cover" type="checkbox" label="Hide Cover Text" %}
+                    </div>
+                </div>
                 {% include modules/field.html id="controls-cover" type="file" attrs='accept="image/*"' label="Cover" %}
             </div>
             <div class="columns-column">
