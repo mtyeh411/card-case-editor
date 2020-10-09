@@ -23,6 +23,21 @@
                     </div>
                 </div>
                 <div class="columns">
+                  <div class="columns-column">
+                    {% include modules/field.html id="controls-card-color" type="color" label="Card Color" %}
+                  </div>
+                  <div class="columns-column">
+                    {% include modules/field.html id="controls-text-color" type="color" label="Text Color" %}
+                  </div>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Cover</legend>
+        <div class="columns">
+            <div class="columns-column-2">
+                <div class="columns">
                     <div class="columns-column">
                         {% include modules/field.html id="controls-full-bleed-cover" type="checkbox" label="Full-bleed Cover" %}
                     </div>
@@ -32,12 +47,7 @@
                 </div>
                 {% include modules/field.html id="controls-cover" type="file" attrs='accept="image/*"' label="Cover" %}
             </div>
-            <div class="columns-column">
-                {% include modules/field.html id="controls-card-color" type="color" label="Card Color" %}
-                {% include modules/field.html id="controls-text-color" type="color" label="Text Color" %}
-            </div>
         </div>
-        <hr/>
         <div class="columns">
             <div class="columns-column-2">
                 {% include modules/field.html id="controls-title" type="text" label="Title" %}
@@ -47,7 +57,6 @@
                 {% include modules/field.html id="controls-title-size" type="number" attrs='min="0" step="0.1"' label="Title Size" %}
             </div>
         </div>
-        <hr/>
         <div class="columns">
             <div class="columns-column-2">
                 {% include modules/field.html id="controls-type" type="text" label="Type" %}
@@ -56,7 +65,9 @@
                 {% include modules/field.html id="controls-type-size" type="number" attrs='min="0" step="0.1"' label="Type Size" %}
             </div>
         </div>
-        <hr/>
+    </fieldset>
+    <fieldset>
+        <legend>Spine</legend>
         <div class="columns">
             <div class="columns-column-2">
                 {% include modules/field.html id="controls-note-upper" type="text" label="Note Upper" %}
@@ -66,7 +77,9 @@
                 {% include modules/field.html id="controls-note-size" type="number" attrs='min="0" step="0.1"' label="Note Size" %}
             </div>
         </div>
-        <hr/>
+    </fieldset>
+    <fieldset>
+        <legend>Fold</legend>
         <div class="columns">
             <div class="columns-column-2">
                 {% include modules/field.html id="controls-side-a" type="textarea" attrs='rows="5"' label="Side A" %}
