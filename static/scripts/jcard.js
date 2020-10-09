@@ -9,13 +9,16 @@ var jcard = (function() {
             useLogo:    controls.querySelector('#controls-use-logo'),
             rotateLogo: controls.querySelector('#controls-rotate-logo'),
 
-            hideCover:  controls.querySelector('#controls-hide-text-cover'),
-            fullCover:  controls.querySelector('#controls-full-bleed-cover'),
             print2:     controls.querySelector('#controls-print-2'),
             forceCaps:  controls.querySelector('#controls-force-caps'),
             shortBack:  controls.querySelector('#controls-short-back'),
 
             cover:      controls.querySelector('#controls-cover'),
+            hideCover:  controls.querySelector('#controls-hide-text-cover'),
+            fullCover:  controls.querySelector('#controls-full-bleed-cover'),
+            cropCoverX: controls.querySelector('#controls-crop-cover-x'),
+            cropCoverY: controls.querySelector('#controls-crop-cover-y'),
+
             cardColor:  controls.querySelector('#controls-card-color'),
             textColor:  controls.querySelector('#controls-text-color'),
 
@@ -84,6 +87,9 @@ var jcard = (function() {
 
         addRotationListener(inputs.rotateLogo, outputs.logo);
 
+        addCropListener(inputs.cropCoverX, outputs.cover, 'x');
+        addCropListener(inputs.cropCoverY, outputs.cover, 'y');
+
         outputs.titles.forEach(function(titleOutput) {
             addTextListener(inputs.title, titleOutput);
         });
@@ -150,6 +156,30 @@ var jcard = (function() {
     function addRotationListener(input, output) {
         input.addEventListener('input', function(event) {
             output.style.transform = 'rotate(' + input.value + 'deg)';
+        });
+    }
+
+    function addCropListener(input, output, axis) {
+        input.addEventListener('input', function(event) {
+            if ((initPosition = output.style.objectPosition) === "") {
+                initPosition = "0px 0px";
+            }
+            var position = initPosition.split(" ");
+            var newPosition;
+            switch(axis) {
+                case 'x':
+                    newPosition = [input.value + 'px', position[1]].join(" ")
+                    break;
+                case 'y':
+                    newPosition = [position[0], input.value + 'px'].join(" ")
+                    break;
+                default:
+                    newPosition = initPosition;
+                    break;
+            }
+
+            console.log(newPosition);
+            output.style.objectPosition = newPosition;
         });
     }
 

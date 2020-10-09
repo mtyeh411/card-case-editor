@@ -39,10 +39,11 @@
             <div class="columns-column-2">
                 <div class="columns">
                     <div class="columns-column">
-                        {% include modules/field.html id="controls-full-bleed-cover" type="checkbox" label="Full-bleed Cover" %}
+                        {% include modules/field.html id="controls-crop-cover-x" type="number" attrs='step="1"' label="Crop X" %}
+                        {% include modules/field.html id="controls-crop-cover-y" type="number" attrs='step="1"' label="Crop Y" %}
                     </div>
                     <div class="columns-column">
-                        {% include modules/field.html id="controls-hide-text-cover" type="checkbox" label="Hide Cover Text" %}
+                        {% include modules/field.html id="controls-full-bleed-cover" type="checkbox" label="Full-bleed Cover" %}
                     </div>
                 </div>
                 {% include modules/field.html id="controls-cover" type="file" attrs='accept="image/*"' label="Cover" %}
@@ -60,6 +61,7 @@
         <div class="columns">
             <div class="columns-column-2">
                 {% include modules/field.html id="controls-type" type="text" label="Type" %}
+                {% include modules/field.html id="controls-hide-text-cover" type="checkbox" label="Hide Cover Text" %}
             </div>
             <div class="columns-column">
                 {% include modules/field.html id="controls-type-size" type="number" attrs='min="0" step="0.1"' label="Type Size" %}
