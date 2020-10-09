@@ -75,6 +75,9 @@ $template-track-line-height: 1.2;
     &-side-a::before { content: $template-side-a-text; }
     &-side-b::before { content: $template-side-b-text; }
 
+    &-back.hide-headings &-side-a::before { content: ""; }
+    &-back.hide-headings &-side-b::before { content: ""; }
+
     // spine
     &-spine {
         $template-spine-pos: $template-back-width;
@@ -173,6 +176,8 @@ $template-track-line-height: 1.2;
     }
     &.short-back &-side-a::before { content: $template-side-a-text + $template-side-sep; }
     &.short-back &-side-b::before { content: $template-side-b-text + $template-side-sep; }
+    &.short-back &-back.hide-headings &-side-a::before { content: ""; }
+    &.short-back &-back.hide-headings &-side-b::before { content: ""; }
 
     // force all caps
     &.force-caps { text-transform: uppercase; }

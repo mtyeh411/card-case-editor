@@ -33,6 +33,7 @@ var jcard = (function() {
             noteLower:  controls.querySelector('#controls-note-lower'),
             noteSize:   controls.querySelector('#controls-note-size'),
 
+            hideHeadings: controls.querySelector('#controls-hide-headings'),
             sideA:      controls.querySelector('#controls-side-a'),
             sideB:      controls.querySelector('#controls-side-b'),
             trackSize:  controls.querySelector('#controls-track-size'),
@@ -61,6 +62,7 @@ var jcard = (function() {
             noteGroup:      template.querySelector('.template-note-group'),
             noteUpper:      template.querySelector('.template-note-upper'),
             noteLower:      template.querySelector('.template-note-lower'),
+            back:           template.querySelector('.template-back'),
             sideA:          template.querySelector('.template-side-a'),
             sideB:          template.querySelector('.template-side-b')
         }
@@ -78,6 +80,7 @@ var jcard = (function() {
         addToggleListener(inputs.fullCover, outputs.root, 'full-bleed-cover');
         addToggleListener(inputs.shortBack, outputs.root, 'short-back');
         addToggleListener(inputs.forceCaps, outputs.root, 'force-caps');
+        addToggleListener(inputs.hideHeadings, outputs.back, 'hide-headings');
 
         addImageListener(inputs.cover, outputs.cover);
         addImageListener(inputs.logo, outputs.logo);
