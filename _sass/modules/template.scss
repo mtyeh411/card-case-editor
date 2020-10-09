@@ -106,8 +106,8 @@ $template-track-line-height: 1.2;
     }
     &-note-logo {
         display: none;
-        width: $template-spine-width;
-        height: $template-spine-width;
+        width: calc(#{$template-spine-width} * 0.75);
+        height: calc(#{$template-spine-width} * 0.75);
     }
 
     &.has-logo &-note-logo {
