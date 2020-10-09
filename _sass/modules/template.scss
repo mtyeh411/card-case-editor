@@ -101,6 +101,15 @@ $template-track-line-height: 1.2;
         margin-right: $template-panel-medium-padding;
         text-align: right;
     }
+    &-note-logo {
+        display: none;
+        width: $template-spine-width;
+        height: $template-spine-width;
+    }
+
+    &.has-logo &-note-logo {
+        display: block;
+    }
 
     // front
     &-front {

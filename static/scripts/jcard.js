@@ -5,6 +5,10 @@ var jcard = (function() {
     // find input elements in the controls module
     function findInputs(controls) {
         return {
+            logo:       controls.querySelector('#controls-logo'),
+            useLogo:    controls.querySelector('#controls-use-logo'),
+            rotateLogo: controls.querySelector('#controls-rotate-logo'),
+
             hideCover:  controls.querySelector('#controls-hide-text-cover'),
             fullCover:  controls.querySelector('#controls-full-bleed-cover'),
             print2:     controls.querySelector('#controls-print-2'),
@@ -39,6 +43,7 @@ var jcard = (function() {
             root:           template,
             boundaries:     template.querySelector('.template-boundaries'),
             cover:          template.querySelector('.template-cover'),
+            logo:           template.querySelector('.template-note-logo'),
             titleGroups:    [
                 template.querySelector('.template-front-title-group'),
                 template.querySelector('.template-spine-title-group')],
@@ -65,14 +70,19 @@ var jcard = (function() {
 
     // add listeners to inputs that update j-card outputs
     function addJCardListeners(inputs, outputs) {
+        addToggleListener(inputs.useLogo, outputs.root, 'has-logo');
         addToggleListener(inputs.hideCover, outputs.root, 'front-text-hidden');
         addToggleListener(inputs.fullCover, outputs.root, 'full-bleed-cover');
         addToggleListener(inputs.shortBack, outputs.root, 'short-back');
         addToggleListener(inputs.forceCaps, outputs.root, 'force-caps');
 
         addImageListener(inputs.cover, outputs.cover);
+        addImageListener(inputs.logo, outputs.logo);
+
         addColorListener(inputs.textColor, outputs.root, 'color');
         addColorListener(inputs.cardColor, outputs.boundaries, 'backgroundColor');
+
+        addRotationListener(inputs.rotateLogo, outputs.logo);
 
         outputs.titles.forEach(function(titleOutput) {
             addTextListener(inputs.title, titleOutput);
@@ -135,6 +145,12 @@ var jcard = (function() {
             }
             input.dispatchEvent(event);
         }
+    }
+
+    function addRotationListener(input, output) {
+        input.addEventListener('input', function(event) {
+            output.style.transform = 'rotate(' + input.value + 'deg)';
+        });
     }
 
     // copy an input value to an output innerHTML on input change
