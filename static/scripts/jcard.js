@@ -123,14 +123,14 @@ var jcard = (function() {
 
     // populate inputs with field values or defaults
     function populate(inputs, fields) {
-        inputs.shortBack.checked = fields.short_back !== undefined ? fields.short_back : false;
+        inputs.shortBack.checked = fields.short_back !== undefined ? fields.short_back : true;
 
         inputs.cardColor.value = fields.card_color || 'white';
         inputs.textColor.value = fields.text_color || 'black';
 
         inputs.title.value = fields.title || '';
         inputs.subtitle.value = fields.subtitle || '';
-        inputs.titleSize.value = fields.title_size || 12;
+        inputs.titleSize.value = fields.title_size || 18;
 
         inputs.type.value = fields.type || '';
         inputs.typeSize.value = fields.type_size || 10;
@@ -143,6 +143,10 @@ var jcard = (function() {
         inputs.sideB.value = formatList(fields.side_b || []);
         inputs.trackSize.value = fields.track_size || 9;
         inputs.backSize.value = fields.back_size || 8;
+
+        inputs.fullCover.checked = fields.full_cover !== undefined ? fields.full_cover : true;
+        inputs.hideCover.checked = fields.hide_cover !== undefined ? fields.hide_cover : true;
+        inputs.hideHeadings.checked = fields.hide_headings !== undefined ? fields.hide_headings : true;
     }
 
     // trigger listener calls on all fields
@@ -184,7 +188,6 @@ var jcard = (function() {
                     break;
             }
 
-            console.log(newPosition);
             output.style.objectPosition = newPosition;
         });
     }
