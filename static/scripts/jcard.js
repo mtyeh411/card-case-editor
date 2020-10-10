@@ -5,40 +5,41 @@ var jcard = (function() {
     // find input elements in the controls module
     function findInputs(controls) {
         return {
-            logo:       controls.querySelector('#controls-logo'),
-            useLogo:    controls.querySelector('#controls-use-logo'),
-            rotateLogo: controls.querySelector('#controls-rotate-logo'),
+            logo:         controls.querySelector('#controls-logo'),
+            useLogo:      controls.querySelector('#controls-use-logo'),
+            rotateLogo:   controls.querySelector('#controls-rotate-logo'),
 
-            print2:     controls.querySelector('#controls-print-2'),
-            forceCaps:  controls.querySelector('#controls-force-caps'),
-            font:       controls.querySelector('#controls-font'),
-            shortBack:  controls.querySelector('#controls-short-back'),
+            print2:       controls.querySelector('#controls-print-2'),
+            forceCaps:    controls.querySelector('#controls-force-caps'),
+            font:         controls.querySelector('#controls-font'),
+            shortBack:    controls.querySelector('#controls-short-back'),
 
-            cover:      controls.querySelector('#controls-cover'),
-            hideCover:  controls.querySelector('#controls-hide-text-cover'),
-            fullCover:  controls.querySelector('#controls-full-bleed-cover'),
-            cropCoverX: controls.querySelector('#controls-crop-cover-x'),
-            cropCoverY: controls.querySelector('#controls-crop-cover-y'),
+            cover:        controls.querySelector('#controls-cover'),
+            hideCover:    controls.querySelector('#controls-hide-text-cover'),
+            fullCover:    controls.querySelector('#controls-full-bleed-cover'),
+            cropCoverX:   controls.querySelector('#controls-crop-cover-x'),
+            cropCoverY:   controls.querySelector('#controls-crop-cover-y'),
 
-            cardColor:  controls.querySelector('#controls-card-color'),
-            textColor:  controls.querySelector('#controls-text-color'),
+            cardColor:    controls.querySelector('#controls-card-color'),
+            textColor:    controls.querySelector('#controls-text-color'),
 
-            title:      controls.querySelector('#controls-title'),
-            subtitle:   controls.querySelector('#controls-subtitle'),
-            titleSize:  controls.querySelector('#controls-title-size'),
+            title:        controls.querySelector('#controls-title'),
+            subtitle:     controls.querySelector('#controls-subtitle'),
+            titleSize:    controls.querySelector('#controls-title-size'),
 
-            type:       controls.querySelector('#controls-type'),
-            typeSize:   controls.querySelector('#controls-type-size'),
+            type:         controls.querySelector('#controls-type'),
+            typeSize:     controls.querySelector('#controls-type-size'),
 
-            noteUpper:  controls.querySelector('#controls-note-upper'),
-            noteLower:  controls.querySelector('#controls-note-lower'),
-            noteSize:   controls.querySelector('#controls-note-size'),
+            titleSpacing: controls.querySelector('#controls-title-spacing'),
+            noteUpper:    controls.querySelector('#controls-note-upper'),
+            noteLower:    controls.querySelector('#controls-note-lower'),
+            noteSize:     controls.querySelector('#controls-note-size'),
 
             hideHeadings: controls.querySelector('#controls-hide-headings'),
-            sideA:      controls.querySelector('#controls-side-a'),
-            sideB:      controls.querySelector('#controls-side-b'),
-            trackSize:  controls.querySelector('#controls-track-size'),
-            backSize:   controls.querySelector('#controls-back-size')
+            sideA:        controls.querySelector('#controls-side-a'),
+            sideB:        controls.querySelector('#controls-side-b'),
+            trackSize:    controls.querySelector('#controls-track-size'),
+            backSize:     controls.querySelector('#controls-back-size')
         }
     }
 
@@ -95,6 +96,8 @@ var jcard = (function() {
 
         addCropListener(inputs.cropCoverX, outputs.cover, 'x');
         addCropListener(inputs.cropCoverY, outputs.cover, 'y');
+
+        addLetterSpacingListener(inputs.titleSpacing, outputs.titles[1]);
 
         outputs.titles.forEach(function(titleOutput) {
             addTextListener(inputs.title, titleOutput);
@@ -161,6 +164,12 @@ var jcard = (function() {
             }
             input.dispatchEvent(event);
         }
+    }
+
+    function addLetterSpacingListener(input, output) {
+        input.addEventListener('input', function(event) {
+            output.style.letterSpacing = input.value + 'in';
+        });
     }
 
     function addRotationListener(input, output) {
