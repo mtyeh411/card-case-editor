@@ -28,8 +28,18 @@ layout: base
         {% include modules/controls.html %}
     </div>
 </div>
+<div id="jcard2" class="jcard">
+    <div class="jcard-preview">
+        {% include modules/template.html cover=fields.cover %}
+    </div>
+    <div class="jcard-duplicate"></div>
+    <div class="jcard-controls">
+        {% include modules/controls.html %}
+    </div>
+</div>
 <script>
     (function() {
         jcard.init('#jcard', {{ page.fields | jsonify }});
+        jcard.init('#jcard2', {{ page.fields | jsonify }});
     })();
 </script>
