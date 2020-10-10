@@ -11,6 +11,7 @@ var jcard = (function() {
 
             print2:     controls.querySelector('#controls-print-2'),
             forceCaps:  controls.querySelector('#controls-force-caps'),
+            font:       controls.querySelector('#controls-font'),
             shortBack:  controls.querySelector('#controls-short-back'),
 
             cover:      controls.querySelector('#controls-cover'),
@@ -89,6 +90,8 @@ var jcard = (function() {
         addColorListener(inputs.cardColor, outputs.boundaries, 'backgroundColor');
 
         addRotationListener(inputs.rotateLogo, outputs.logo);
+
+        addFontFaceListener(inputs.font, outputs.root);
 
         addCropListener(inputs.cropCoverX, outputs.cover, 'x');
         addCropListener(inputs.cropCoverY, outputs.cover, 'y');
@@ -202,6 +205,12 @@ var jcard = (function() {
                 output.classList.remove(toggleClass);
             }
         });
+    }
+
+    function addFontFaceListener(input, output) {
+        input.addEventListener('input', function(event) {
+            output.style.fontFamily = input.value;
+        })
     }
 
     // set the font size of an output element to the input value on change

@@ -7,6 +7,9 @@ scripts:
   - /scripts/jcard.js
 
 fonts:
+  - name: Back Issues
+    path: /fonts/BackIssuesBB_reg.otf
+    format: opentype
   - name: Alte Haas Grotesk
     path: /fonts/alte-haas-grotesk.ttf
     format: truetype

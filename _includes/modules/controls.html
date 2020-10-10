@@ -16,11 +16,16 @@
                         {% include modules/field.html id="controls-short-back" type="checkbox" label="Short Back" %}
                     </div>
                     <div class="columns-column">
-                        {% include modules/field.html id="controls-force-caps" type="checkbox" label="Force CAPS" attrs='checked' %}
-                    </div>
-                    <div class="columns-column">
                         {% include modules/field.html id="controls-print-2" type="checkbox" label="Print 2" %}
                     </div>
+                </div>
+                <div class="columns">
+                  <div class="columns-column">
+                    {% include modules/field.html id="controls-font" type="select" label="Font" options="Back Issues, Alte Haas Grotesk" %}
+                  </div>
+                  <div class="columns-column">
+                    {% include modules/field.html id="controls-force-caps" type="checkbox" label="Force CAPS" attrs='checked' %}
+                  </div>
                 </div>
                 <div class="columns">
                   <div class="columns-column">

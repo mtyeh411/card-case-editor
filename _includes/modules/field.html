@@ -20,6 +20,17 @@
         {{ include.attrs }}
     {%- endif %}
     ></textarea>
+{%- elsif include.type == "select" -%}
+    <select
+      id="{{ include.id }}"
+    >
+    {% assign options = include.options | split: ", " %}
+    {% for option in options %}
+      <option value="{{ option }}">
+        {{ option }}
+      </option>
+    {% endfor %}
+    </select>
 {%- else -%}
     <input
         id="{{ include.id }}"
