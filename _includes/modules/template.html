@@ -12,7 +12,8 @@
 
 {%- assign static = site.data.static -%}
 {%- assign cover = include.cover | default: static.images.cover -%}
-{%- assign logo = include.logo | default: static.images.cover -%}
+{%- assign logo = include.logo | default: "" -%}
+{%- assign back_image = include.back_image | default: "" -%}
 
 <div class="template printable {{ include.type }}">
     <div class="template-boundaries">
@@ -22,7 +23,8 @@
     <div class="template-fold-1 printable-fold"></div>
     <div class="template-fold-2 printable-fold"></div>
 
-    <div class="template-back">
+    <div class="template-back is-landscape">
+        <img class="template-back-image" src="{{ site.baseurl }}{{ static.root }}{{ back_image}}" alt="Back Image" />
         <div class="template-side-a"></div>
         <div class="template-side-b"></div>
     </div>

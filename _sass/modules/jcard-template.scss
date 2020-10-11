@@ -74,10 +74,6 @@ $template-track-line-height: 1.2;
         height: calc(#{$template-spine-width} * 0.75);
     }
 
-    &.has-logo &-note-logo {
-        display: block;
-    }
-
     &-front-group {
         $template-front-group-height: $template-height - $template-front-width;
 
@@ -131,17 +127,14 @@ $template-track-line-height: 1.2;
 
     // full-bleed cover
     &.full-bleed-cover &-cover {
-      height: $template-height !important;
+        height: $template-height !important;
     }
     &.full-bleed-cover &-front-group {
-      background: rgba(255,255,255,0.5);
-      position: absolute;
-      bottom: 0;
+        background: rgba(255,255,255,0.5);
+        position: absolute;
+        bottom: 0;
     }
     &.full-bleed-cover &-front {
-      position: relative;
-    }
-    &.front-text-hidden &-front-group {
-      display: none;
+        position: relative;
     }
 }

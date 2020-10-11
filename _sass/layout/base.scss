@@ -7,6 +7,17 @@
 .base {
     margin: $text-medium-gap;
 
+    .is-visible {
+      display: inherit;
+    }
+    .is-hidden {
+      display: none;
+    }
+
+    .title {
+      text-transform: capitalize;
+    }
+
     &-column {
         width: $media-content-width;
         margin: 0 auto;
@@ -16,6 +27,8 @@
         margin-bottom: $text-wide-gap;
         padding-bottom: $text-medium-gap;
         border-bottom: $sizes-line dashed $colors-fg-color;
+
+        h1 { margin-bottom: 0.5rem; }
     }
     &-footer {
         margin-top: $text-wide-gap;

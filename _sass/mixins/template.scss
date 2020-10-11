@@ -58,20 +58,36 @@
     // back
     .template-back {
         position: absolute;
-
         display: flex;
+        text-align: center;
         flex-flow: column nowrap;
         justify-content: center;
 
-        width: $template-height;
-        height: $template-back-width;
+        &.is-portrait {
+          width: $template-back-width;
+          height: $template-height;
 
-        transform-origin: bottom left;
-        transform:
-            translateY(-$template-back-width)
-            rotate(90deg);
+          .template-back-image {
+              height: calc(#{$template-height} * .66);
+              width: $template-back-width;
+              margin-bottom: 0.125in;
+              object-fit: contain;
+          }
+        }
 
-        text-align: center;
+        &.is-landscape {
+          width: $template-height;
+          height: $template-back-width;
+
+          transform-origin: bottom left;
+          transform:
+              translateY(-$template-back-width)
+              rotate(90deg);
+
+          .template-back-image {
+              display: none; // not supported
+          }
+        }
 
         &.hide-headings .template-side-a::before {content: ""; }
         &.hide-headings .template-side-b::before { content: ""; }

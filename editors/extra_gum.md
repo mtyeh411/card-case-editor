@@ -4,6 +4,7 @@ layout: extra_gum
 fields:
   card_color: "#ffffff"
   text_color: "#000000"
+  show_front_text: "true"
   title: "The Numbers Game"
   subtitle: "Dark Mathematicians"
   type: "Stereo Tape"
