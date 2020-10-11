@@ -1,6 +1,6 @@
 root: /static
 
-styles: 
+styles:
   - /styles/styles.css
 
 scripts:

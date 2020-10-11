@@ -12,8 +12,9 @@
 
 {%- assign static = site.data.static -%}
 {%- assign cover = include.cover | default: static.images.cover -%}
+{%- assign logo = include.logo | default: static.images.cover -%}
 
-<div class="template printable">
+<div class="template printable {{ include.type }}">
     <div class="template-boundaries">
         <div class="template-bleed printable-bleed"></div>
         <div class="template-crop printable-crop"></div>

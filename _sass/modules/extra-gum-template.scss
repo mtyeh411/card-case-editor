@@ -1,0 +1,19 @@
+// Blank Extra Gum template
+//
+// Requires:
+//    modules/jcard_template.scss
+
+// dimensions
+$template-height: 4in;
+$template-back-width: 2.125in;
+$template-front-width: 3in;
+$template-spine-width: 0.625in;
+
+.template.extra-gum {
+    @include template-dimensions(
+        $template-front-width,
+        $template-back-width,
+        $template-spine-width,
+        $template-height
+    );
+}

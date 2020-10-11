@@ -126,14 +126,14 @@ var jcard = (function() {
 
     // populate inputs with field values or defaults
     function populate(inputs, fields) {
-        inputs.shortBack.checked = fields.short_back !== undefined ? fields.short_back : true;
+        inputs.shortBack.checked = fields.short_back !== undefined ? fields.short_back : false;
 
         inputs.cardColor.value = fields.card_color || 'white';
         inputs.textColor.value = fields.text_color || 'black';
 
         inputs.title.value = fields.title || '';
         inputs.subtitle.value = fields.subtitle || '';
-        inputs.titleSize.value = fields.title_size || 18;
+        inputs.titleSize.value = fields.title_size || 12;
 
         inputs.type.value = fields.type || '';
         inputs.typeSize.value = fields.type_size || 10;
@@ -147,9 +147,13 @@ var jcard = (function() {
         inputs.trackSize.value = fields.track_size || 9;
         inputs.backSize.value = fields.back_size || 8;
 
-        inputs.fullCover.checked = fields.full_cover !== undefined ? fields.full_cover : true;
-        inputs.hideCover.checked = fields.hide_cover !== undefined ? fields.hide_cover : true;
-        inputs.hideHeadings.checked = fields.hide_headings !== undefined ? fields.hide_headings : true;
+        inputs.font.value = fields.font || 'Alte Haas Grotesk';
+
+        inputs.useLogo.checked = fields.use_logo !== undefined ? fields.use_logo : false;
+        inputs.fullCover.checked = fields.full_cover !== undefined ? fields.full_cover : false;
+        inputs.hideCover.checked = fields.hide_cover !== undefined ? fields.hide_cover : false;
+        inputs.hideHeadings.checked = fields.hide_headings !== undefined ? fields.hide_headings : false;
+        inputs.titleSpacing.value = fields.title_spacing || 0;
     }
 
     // trigger listener calls on all fields

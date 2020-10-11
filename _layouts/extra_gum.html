@@ -18,9 +18,10 @@ layout: base
         fields.side_b:      list of side "B" tracks
 {%- endcomment -%}
 
-<div id="jcard" class="jcard">
+
+<div id="jcard" class="jcard extra-gum">
     <div class="jcard-preview">
-        {% include modules/template.html cover=page.fields.cover logo=page.fields.logo %}
+        {% include modules/template.html cover=page.fields.cover logo=page.fields.logo type="extra-gum" %}
     </div>
     <div class="jcard-duplicate"></div>
     <div class="jcard-controls">
@@ -29,7 +30,7 @@ layout: base
 </div>
 <div id="jcard2" class="jcard">
     <div class="jcard-preview">
-        {% include modules/template.html cover=page.fields2.cover logo=page.fields2.logo %}
+        {% include modules/template.html cover=page.fields2.cover logo=page.fields2.logo type="extra-gum" %}
     </div>
     <div class="jcard-duplicate"></div>
     <div class="jcard-controls">

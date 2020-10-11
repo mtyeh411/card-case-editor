@@ -1,12 +1,16 @@
 // Blank j-card template
+//
+// Requires:
+//    mixins/template.scss
 
 
 // dimensions
 $template-height: 4in;
-$template-back-width: 1in;
-$template-short-back-width: 0.6in;
-$template-spine-width: 0.5in;
 $template-front-width: 2.556in;
+$template-back-width: 1in;
+$template-spine-width: 0.5in;
+
+$template-short-back-width: 0.6in;
 $template-panel-medium-padding: 0.15in;
 $template-panel-small-padding: 0.05in;
 
@@ -20,13 +24,14 @@ $template-line-height: 1.1;
 $template-track-line-height: 1.2;
 
 .template {
-    $template-width: $template-back-width + $template-spine-width + $template-front-width;
-    $template-fold-1-pos: $template-back-width;
-    $template-fold-2-pos: $template-back-width + $template-spine-width;
-
-    width: $template-width;
-    height: $template-height;
     line-height: $template-line-height;
+
+    @include template-dimensions(
+        $template-front-width,
+        $template-back-width,
+        $template-spine-width,
+        $template-height
+    );
 
     // crop and bleed boundaries
     &-boundaries {
@@ -36,34 +41,12 @@ $template-track-line-height: 1.2;
         background-color: inherit;
     }
 
-    // fold markers
-    &-fold-1 { left: $template-fold-1-pos; }
-    &-fold-2 { left: $template-fold-2-pos; }
-
     // common
     &-front-title-group, &-spine-title-group  {
         font-weight: bold;
         white-space: nowrap;
     }
 
-    // back
-    &-back {
-        position: absolute;
-
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-
-        width: $template-height;
-        height: $template-back-width;
-
-        transform-origin: bottom left;
-        transform:
-            translateY(-$template-back-width)
-            rotate(90deg);
-
-        text-align: center;
-    }
     &-side-a { margin: 0 $template-panel-medium-padding $text-narrow-gap; }
     &-side-b { margin: 0 $template-panel-medium-padding; }
     &-side-a:empty, &-side-b:empty { display: none; }
@@ -78,25 +61,6 @@ $template-track-line-height: 1.2;
     &-back.hide-headings &-side-a::before { content: ""; }
     &-back.hide-headings &-side-b::before { content: ""; }
 
-    // spine
-    &-spine {
-        $template-spine-pos: $template-back-width;
-
-        position: absolute;
-
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-        justify-content: space-between;
-
-        width: $template-height;
-        height: $template-spine-width;
-
-        transform-origin: bottom left;
-        transform:
-            translate($template-spine-pos, -$template-spine-width)
-            rotate(90deg);
-    }
     &-spine-title-group {
         margin-left: $template-panel-medium-padding;
     }
@@ -112,23 +76,6 @@ $template-track-line-height: 1.2;
 
     &.has-logo &-note-logo {
         display: block;
-    }
-
-    // front
-    &-front {
-        $template-front-pos: $template-back-width + $template-spine-width;
-
-        position: absolute;
-        left: $template-front-pos;
-
-        width: $template-front-width;
-        height: $template-height;
-    }
-    &-cover {
-        display: block;
-        width: $template-front-width;
-        height: $template-front-width;
-        object-fit: cover;
     }
 
     &-front-group {
