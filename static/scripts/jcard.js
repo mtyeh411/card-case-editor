@@ -7,6 +7,7 @@ var jcard = (function() {
         return {
             // options
             print2:           controls.querySelector('#controls-print-2'),
+            flip:             controls.querySelector('#controls-flip'),
 
             font:             controls.querySelector('#controls-font'),
             cardColor:        controls.querySelector('#controls-card-color'),
@@ -104,6 +105,7 @@ var jcard = (function() {
         addColorListener(inputs.textColor, outputs.root, 'color');
         addColorListener(inputs.cardColor, outputs.boundaries, 'backgroundColor');
         addFontFaceListener(inputs.font, outputs.root);
+        addToggleListener(inputs.flip, outputs.root, 'is-flipped');
 
         // front
         addVisibilityListener(inputs.showFrontText, outputs.frontText);
@@ -158,6 +160,7 @@ var jcard = (function() {
         inputs.font.value = fields.font || 'Alte Haas Grotesk';
         inputs.cardColor.value = fields.card_color || 'white';
         inputs.textColor.value = fields.text_color || 'black';
+        inputs.flip.checked = fields.flipped !== undefined ? fields.flipped : false;
 
         // front
         inputs.title.value = fields.title || '';

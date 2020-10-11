@@ -11,6 +11,20 @@
     width: $template-width;
     height: $template-height;
 
+    // upside down
+    &.is-flipped {
+        .template-front, .template-back {
+            transform: rotate(180deg) !important;
+        }
+
+        .template-spine {
+            transform:
+                translate($template-back-width + $template-spine-width, $template-height - $template-spine-width)
+                rotate(270deg)
+                !important;
+        }
+    }
+
     // fold markers
     .template-fold-1 { left: $template-fold-1-pos; }
     .template-fold-2 { left: $template-fold-2-pos; }
@@ -37,22 +51,22 @@
 
     // spine
     .template-spine {
-      $template-spine-pos: $template-back-width;
+        $template-spine-pos: $template-back-width;
 
-      position: absolute;
+        position: absolute;
 
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
-      justify-content: space-between;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
 
-      width: $template-height;
-      height: $template-spine-width;
+        width: $template-height;
+        height: $template-spine-width;
 
-      transform-origin: bottom left;
-      transform:
-          translate($template-spine-pos, -$template-spine-width)
-          rotate(90deg);
+        transform-origin: bottom left;
+        transform:
+            translate($template-spine-pos, -$template-spine-width)
+            rotate(90deg);
     }
 
     // back
