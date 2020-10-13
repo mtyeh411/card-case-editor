@@ -5,7 +5,7 @@ exclude:
 sass:
   style: compressed
 
-baseurl: /jcard-template
+permalink: /:slugified_categories/:title:output_ext
 
 # test server
 port: 8000
