@@ -6,8 +6,4 @@ sass:
   sass_dir: _sass
   style: compressed
 
-permalink: /:slugified_categories/:title:output_ext
-
-# test server
-port: 8000
-host: 0.0.0.0
+permalink: /:categories/:title:output_ext
