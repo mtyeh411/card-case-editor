@@ -1,20 +1,25 @@
-# J-Card Template
-[Printable in-browser template](https://unixispower.gitlab.io/jcard-template/)
-for cassette tape J-Cards built using [Jekyll](https://jekyllrb.com/) and
-hosted using [GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/).
+# Card Case Editor
+
+Printable in-browser template editor for purpose of creating customized playing card storage solution using cassette tape J-Cards or Extra Gum cases.
+
+This is built using [Jekyll](https://jekyllrb.com/) and is hosted on [Github Pages](https://mtyeh411.github.io/card-case-editor/)
 
 
 ## Testing
-You will need to [install Jekyll](https://jekyllrb.com/docs/installation/)
-before you can serve the site on your local machine. Run the following to
-start a local server:
+
+[Install asdf](https://asdf-vm.com/#/core-manage-asdf?id=install)
+
+```shell
+$ asdf plugin add ruby
+$ asdf install
+$ bundle install
+```
 
 ```shell
 $ jekyll serve
 ```
 
-Open a web browser to `http://localhost:8000/jcard-template/` to access the
-site.
+Open a web browser to `http://localhost:4000` to access the site.
 
 
 ## Licensing
@@ -22,5 +27,5 @@ Source in this repository is licensed under the 2-clause BSD license, see
 `LICENSE` for details.
 
 ### Fonts
-Fonts in the `static/fonts` directory were created by Yann Le Coroller and
+The Alte Haas Grotesk font in the `static/fonts` directory was created by Yann Le Coroller and
 are released under a custom license, see `static/fonts/LICENSE` for details.
