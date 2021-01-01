@@ -24,9 +24,14 @@ fields:
   side_a:
   - "scarlet witch: wanda maximoff"
   - "always be running"
+  - "double time"
   - "maximum velocity"
+  - "speed cyclone"
+  - "serval industries"
   - "accelerated reflex"
+  - "friction resistance"
   - "hyper perception"
+  - "reinforced sinew"
 
 fields2:
   flipped: "true"

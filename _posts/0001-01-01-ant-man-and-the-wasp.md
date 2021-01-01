@@ -1,5 +1,5 @@
 ---
-title: Ant-Man & Wasp (draft)
+title: Ant-Man & Wasp
 layout: extra_gum
 category: marvel-champions
 tag: extra_gum
@@ -22,12 +22,15 @@ fields:
   show_back_image: "true"
   hide_headings: "true"
   side_a:
-  - "resize"
+  - "wasp: nadia van dyne"
   - "giant stomp"
+  - "hive mind"
+  - "resize"
+  - "pym particles"
   - "army of ants"
   - "ant-man's helmet"
+  - "giant strength"
   - "wrist gauntlets"
-  - "pym particles"
 
 fields2:
   flipped: "true"
@@ -47,7 +50,13 @@ fields2:
   show_back_image: "true"
   hide_headings: "true"
   side_a:
+  - "ant-man: scott lang"
   - "giant help"
   - "pinpoint strike"
+  - "rapid growth"
+  - "wasp sting"
+  - "pym particles"
+  - "red room training"
   - "bio-synthetic wings"
+  - "wasp's helmet"
 ---
