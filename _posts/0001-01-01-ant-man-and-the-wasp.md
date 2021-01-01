@@ -12,7 +12,7 @@ fields:
   title: "ant-man"
   title_size: 18
   title_spacing: 0.02
-  cover: "/images/marvel_champions/ant_man/cover.jpg"
+  cover: "/images/marvel_champions/ant_man/alt-cover2.jpg"
   logo: "/images/marvel_champions/ant_man/logo.jpg"
   back_image: "/images/marvel_champions/ant_man/silhouette.jpg"
   hide_cover: "true"
