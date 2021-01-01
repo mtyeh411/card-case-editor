@@ -1,7 +1,7 @@
 ---
 title: Spider-Woman
 layout: extra_gum
-category: marvel champions
+category: marvel-champions
 tag: extra_gum
 
 fields:

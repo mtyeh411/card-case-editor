@@ -1,7 +1,7 @@
 ---
 title: Black Panther & Doctor Strange
 layout: extra_gum
-category: marvel champions
+category: marvel-champions
 tag: extra_gum
 
 fields:

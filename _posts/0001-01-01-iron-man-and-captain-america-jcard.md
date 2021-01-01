@@ -1,7 +1,7 @@
 ---
 title: Iron Man & Captain America (jcard)
 layout: jcard
-category: marvel champions
+category: marvel-champions
 tag: jcards
 
 fields:
