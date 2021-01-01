@@ -3,6 +3,7 @@ exclude:
   - README.md
 
 sass:
+  sass_dir: _sass
   style: compressed
 
 permalink: /:slugified_categories/:title:output_ext
