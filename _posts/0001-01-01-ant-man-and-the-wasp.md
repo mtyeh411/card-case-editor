@@ -14,7 +14,7 @@ fields:
   title_spacing: 0.02
   cover: "/images/marvel_champions/ant_man/alt-cover2.jpg"
   logo: "/images/marvel_champions/ant_man/logo.jpg"
-  back_image: "/images/marvel_champions/ant_man/silhouette.jpg"
+  back_image: "/images/marvel_champions/ant_man/silhouette.png"
   hide_cover: "true"
   full_cover: "true"
   use_logo: "true"
