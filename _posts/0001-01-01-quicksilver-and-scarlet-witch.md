@@ -1,5 +1,5 @@
 ---
-title: Quicksilver & Scarlet Witch (draft)
+title: Quicksilver & Scarlet Witch
 layout: extra_gum
 category: marvel-champions
 tag: extra_gum
@@ -52,6 +52,12 @@ fields2:
   hide_headings: "true"
   side_a:
   - "quicksilver: pietro maximoff"
+  - "chaos magic"
   - "hex bolt"
+  - "molecular decay"
+  - "warp reality"
+  - "agatha harkness"
   - "order and chaos"
+  - "magic shield"
+  - "scarlet witch's crest"
 ---
