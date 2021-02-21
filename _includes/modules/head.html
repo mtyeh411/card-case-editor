@@ -11,7 +11,13 @@
 
 
 <head>
-    <title>{{ site.data.site.title }}</title>
+    <title>
+     {% if page.title %}
+       {{ site.data.site.title }} - {{ page.title }}
+     {% else %}
+       {{ site.data.site.title }}
+     {% endif %}
+    </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=4.0" />
     {% for style_path in site.data.static.styles %}
     <link rel="stylesheet" type="text/css"
