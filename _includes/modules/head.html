@@ -20,4 +20,14 @@
     {% for script_path in site.data.static.scripts %}
     <script src="{{ site.baseurl }}{{ site.data.static.root }}{{ script_path }}"></script>
     {% endfor %}
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M13H0204BX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-M13H0204BX');
+    </script>
 </head>
