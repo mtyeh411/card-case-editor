@@ -17,6 +17,7 @@ fields:
   short_back: "true"
   use_logo: "true"
   hide_headings: "true"
+  crop_cover_x: "-45"
   side_a:
   - "war machine: james rhodes"
   - "repulsor blast"
@@ -42,6 +43,7 @@ fields2:
   short_back: "true"
   use_logo: "true"
   hide_headings: "true"
+  crop_cover_x: "-45"
   side_a:
   - "agent 13: sharon carter"
   - "fearless determination"

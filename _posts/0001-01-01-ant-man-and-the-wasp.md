@@ -21,6 +21,7 @@ fields:
   back_orientation: "portrait"
   show_back_image: "true"
   hide_headings: "true"
+  crop_cover_y: "-60"
   side_a:
   - "wasp: nadia van dyne"
   - "giant stomp"
@@ -49,6 +50,7 @@ fields2:
   back_orientation: "portrait"
   show_back_image: "true"
   hide_headings: "true"
+  crop_cover_y: "-20"
   side_a:
   - "ant-man: scott lang"
   - "giant help"

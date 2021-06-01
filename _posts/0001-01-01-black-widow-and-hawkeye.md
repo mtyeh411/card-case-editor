@@ -21,6 +21,7 @@ fields:
   back_orientation: "portrait"
   show_back_image: "true"
   hide_headings: "true"
+  crop_cover_x: "-20"
   side_a:
   - "winter soldier: bucky barnes"
   - "covert ops"
@@ -49,6 +50,7 @@ fields2:
   back_orientation: "portrait"
   show_back_image: "true"
   hide_headings: "true"
+  crop_cover_y: "-25"
   side_a:
   - "mockingbird: bobbi morse"
   - "hawkeye's bow"

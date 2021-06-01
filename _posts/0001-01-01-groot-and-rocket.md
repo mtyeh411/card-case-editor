@@ -21,6 +21,7 @@ fields:
   back_orientation: "portrait"
   show_back_image: "true"
   hide_headings: "true"
+  crop_cover_y: "-20"
   side_a:
   - "fruition"
   - "i am groot"

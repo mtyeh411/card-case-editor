@@ -172,6 +172,8 @@ var jcard = (function() {
         inputs.showFrontText.checked = fields.show_front_text !== undefined ? fields.show_front_text : false;
         inputs.titleSpacing.value = fields.title_spacing || 0;
         inputs.trackSize.value = fields.track_size || 9;
+        inputs.cropCoverX.value = fields.crop_cover_x || 0;
+        inputs.cropCoverY.value = fields.crop_cover_y || 0;
 
         // spine
         inputs.noteUpper.value = fields.note_upper || '';
