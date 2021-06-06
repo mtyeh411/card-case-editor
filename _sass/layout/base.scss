@@ -44,3 +44,20 @@
         &-header, &-footer { display: none; }
     }
 }
+
+.level {
+  @media print {
+    & { display: none; }
+  }
+
+  &-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &-item {
+      margin-bottom: $text-wide-gap;
+      padding-bottom: $text-medium-gap;
+  }
+}
