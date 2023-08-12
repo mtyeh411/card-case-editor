@@ -21,6 +21,7 @@ var jcard = (function() {
             fullCover:        controls.querySelector('#controls-full-bleed-cover'),
             cropCoverX:       controls.querySelector('#controls-crop-cover-x'),
             cropCoverY:       controls.querySelector('#controls-crop-cover-y'),
+            fixedHeight:      controls.querySelector('#controls-fixed-height-cover'),
 
             title:            controls.querySelector('#controls-title'),
             subtitle:         controls.querySelector('#controls-subtitle'),
@@ -114,6 +115,7 @@ var jcard = (function() {
         addImageListener(inputs.cover, outputs.cover);
         addCropListener(inputs.cropCoverX, outputs.cover, 'x');
         addCropListener(inputs.cropCoverY, outputs.cover, 'y');
+        addToggleListener(inputs.fixedHeight, outputs.cover, 'has-fixed-height');
         addTextListener(inputs.type, outputs.type);
         addSizeListener(inputs.typeSize, outputs.type);
 
@@ -174,6 +176,7 @@ var jcard = (function() {
         inputs.trackSize.value = fields.track_size || 9;
         inputs.cropCoverX.value = fields.crop_cover_x || 0;
         inputs.cropCoverY.value = fields.crop_cover_y || 0;
+        inputs.fixedHeight.checked = fields.fixed_height !== undefined ? fields.fixed_height : false;
 
         // spine
         inputs.noteUpper.value = fields.note_upper || '';

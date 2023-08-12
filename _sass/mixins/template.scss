@@ -46,6 +46,12 @@
         width: $template-front-width;
         height: $template-front-width;
         object-fit: cover;
+
+        &.has-fixed-height {
+          width: fit-content;
+          height: $template-height !important;
+          margin: auto;
+        }
     }
 
 
