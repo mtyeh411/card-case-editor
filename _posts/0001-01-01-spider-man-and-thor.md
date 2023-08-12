@@ -9,15 +9,15 @@ fields:
   card_color: "#ffffff"
   text_color: "#000000"
   font: "Back Issues"
-  title: "spider-man"
-  title_size: 18
-  title_spacing: 0.02
+  spine_title: "spider-man"
+  spine_title_size: 18
+  spine_title_spacing: 0.02
   cover: "/images/marvel_champions/spider_man/cover.jpg"
   logo: "/images/marvel_champions/spider_man/logo.jpg"
   back_image: "/images/marvel_champions/spider_man/silhouette.jpg"
   hide_cover: "true"
   full_cover: "true"
-  use_logo: "true"
+  show_lower_spine: "true"
   back_orientation: "portrait"
   show_back_image: "true"
   hide_headings: "true"
@@ -36,15 +36,15 @@ fields2:
   card_color: "#ffffff"
   text_color: "#000000"
   font: "Back Issues"
-  title: "thor"
-  title_size: 18
-  title_spacing: 0.04
+  spine_title: "thor"
+  spine_title_size: 18
+  spine_title_spacing: 0.04
   cover: "/images/marvel_champions/thor/cover.jpg"
   logo: "/images/marvel_champions/thor/logo.jpg"
   back_image: "/images/marvel_champions/thor/silhouette.jpg"
   hide_cover: "true"
   full_cover: "true"
-  use_logo: "true"
+  show_lower_spine: "true"
   back_orientation: "portrait"
   show_back_image: "true"
   hide_headings: "true"

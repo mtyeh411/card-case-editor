@@ -13,6 +13,7 @@
 {%- assign static = site.data.static -%}
 {%- assign cover = include.cover | default: static.images.cover -%}
 {%- assign logo = include.logo | default: "" -%}
+{%- assign upper_spine = include.upper_spine | default: "" -%}
 {%- assign back_image = include.back_image | default: "" -%}
 
 <div class="template printable {{ include.type }}">
@@ -30,6 +31,9 @@
     </div>
 
     <div class="template-spine">
+        <div class="template-upper-spine-container">
+          <img class="template-upper-spine" src="{{ site.baseurl }}{{ static.root }}{{ upper_spine }}" alt="Upper Spine" />
+        </div>
         <div class="template-spine-title-group">
             <div class="template-spine-title"></div>
             <div class="template-spine-subtitle"></div>
@@ -38,7 +42,7 @@
             <div class="template-note-upper"></div>
             <div class="template-note-lower"></div>
         </div>
-        <img class="template-note-logo" src="{{ site.baseurl }}{{ static.root }}{{ logo }}" alt="Logo" />
+        <img class="template-lower-spine" src="{{ site.baseurl }}{{ static.root }}{{ logo }}" alt="Lower Spine" />
     </div>
 
     <div class="template-front">
@@ -48,8 +52,7 @@
                 <div class="template-front-title"></div>
                 <div class="template-front-subtitle"></div>
             </div>
-            <div class="template-tracks"></div>
-            <div class="template-type"></div>
+            <div class="template-front-text"></div>
         </div>
     </div>
 </div>

@@ -9,15 +9,15 @@ fields:
   card_color: "#ffffff"
   text_color: "#000000"
   font: "Back Issues"
-  title: "black panther"
-  title_size: 18
-  title_spacing: 0.01
+  spine_title: "black panther"
+  spine_title_size: 18
+  spine_title_spacing: 0.01
   cover: "/images/marvel_champions/black_panther/cover.jpg"
   logo: "/images/marvel_champions/black_panther/logo.jpg"
   back_image: "/images/marvel_champions/black_panther/silhouette.jpg"
   hide_cover: "true"
   full_cover: "true"
-  use_logo: "true"
+  show_lower_spine: "true"
   back_orientation: "portrait"
   show_back_image: "true"
   hide_headings: "true"
@@ -37,16 +37,16 @@ fields2:
   card_color: "#ffffff"
   text_color: "#000000"
   font: "Back Issues"
-  title: "doctor strange"
-  title_size: 18
-  title_spacing: 0.015
+  spine_title: "doctor strange"
+  spine_title_size: 18
+  spine_title_spacing: 0.015
   cover: "/images/marvel_champions/doctor_strange/cover.jpg"
   logo: "/images/marvel_champions/doctor_strange/logo.jpg"
   back_image: "/images/marvel_champions/doctor_strange/silhouette.jpg"
   back_size: 6.25
   hide_cover: "true"
   full_cover: "true"
-  use_logo: "true"
+  show_lower_spine: "true"
   back_orientation: "portrait"
   show_back_image: "true"
   hide_headings: "true"

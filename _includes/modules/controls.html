@@ -51,7 +51,6 @@
                     </div>
                     <div class="columns-column">
                         {% include modules/field.html id="controls-full-bleed-cover" type="checkbox" label="Full-bleed" %}
-                        {% include modules/field.html id="controls-show-front-text" type="checkbox" label="Show Text" %}
                     </div>
                     <div class="columns-column">
                         {% include modules/field.html id="controls-fixed-height-cover" type="checkbox" label="Fixed Height" %}
@@ -62,26 +61,36 @@
         <hr/>
         <div class="columns">
             <div class="columns-column-2">
+                {% include modules/field.html id="controls-show-front-text" type="checkbox" label="Show Text" %}
+            </div>
+        </div>
+        <div class="columns">
+            <div class="columns-column-2">
                 {% include modules/field.html id="controls-title" type="text" label="Title" %}
                 {% include modules/field.html id="controls-subtitle" type="text" label="Subtitle" %}
             </div>
             <div class="columns-column">
                 {% include modules/field.html id="controls-title-spacing" type="number" attrs='value="0" min="0" step="0.005"' label="Title Spacing" %}
                 {% include modules/field.html id="controls-title-size" type="number" attrs='min="0" step="0.1"' label="Title Size" %}
-                {% include modules/field.html id="controls-track-size" type="number" attrs='min="0" step="0.1"' label="Track Size" %}
-            </div>
-        </div>
-        <div class="columns">
-            <div class="columns-column-2">
-                {% include modules/field.html id="controls-type" type="text" label="Type" %}
-            </div>
-            <div class="columns-column">
-                {% include modules/field.html id="controls-type-size" type="number" attrs='min="0" step="0.1"' label="Type Size" %}
+                {% include modules/field.html id="controls-front-text-size" type="number" attrs='min="0" step="0.1"' label="Text Size" %}
             </div>
         </div>
     </fieldset>
     <fieldset>
         <legend>Spine</legend>
+        <div class="columns">
+            <div class="columns-column-2">
+                {% include modules/field.html id="controls-upper-spine" type="file" attrs='accept="image/*"' label="Upper Spine" %}
+                {% include modules/field.html id="controls-spine-title" type="text" label="Title" %}
+                {% include modules/field.html id="controls-spine-subtitle" type="text" label="Subtitle" %}
+            </div>
+            <div class="columns-column">
+                {% include modules/field.html id="controls-show-upper-spine" type="checkbox" label="Show Image" %}
+                {% include modules/field.html id="controls-spine-title-spacing" type="number" attrs='value="0" min="0" step="0.005"' label="Title Spacing" %}
+                {% include modules/field.html id="controls-spine-title-size" type="number" attrs='min="0" step="0.1"' label="Title Size" %}
+            </div>
+        </div>
+        <hr/>
         <div class="columns">
             <div class="columns-column-2">
                 {% include modules/field.html id="controls-note-upper" type="text" label="Note Upper" %}
@@ -94,12 +103,16 @@
         <hr/>
         <div class="columns">
             <div class="columns-column-2">
-                {% include modules/field.html id="controls-logo" type="file" attrs='accept="image/*"' label="Logo" %}
+                {% include modules/field.html id="controls-lower-spine" type="file" attrs='accept="image/*"' label="Lower Spine" %}
             </div>
             <div class="columns-column">
-                {% include modules/field.html id="controls-rotate-logo" type="number" attrs='value="270" min="0" max="360" step="10"' label="Rotate" %}
-                {% include modules/field.html id="controls-use-logo" type="checkbox" label="Show Logo" %}
+                {% include modules/field.html id="controls-show-lower-spine" type="checkbox" label="Show Image" %}
             </div>
+        </div>
+        <div class="columns">
+          <div class="columns-column">
+                {% include modules/field.html id="controls-rotate-lower-spine" type="number" attrs='value="270" min="0" max="360" step="10"' label="Rotate" %}
+          </div>
         </div>
     </fieldset>
     <fieldset>
@@ -129,8 +142,12 @@
                 {% include modules/field.html id="controls-back-image" type="file" attrs='accept="image/*"' label="Image" %}
             </div>
             <div class="columns-column">
-                {% include modules/field.html id="controls-rotate-back-image" type="number" attrs='min="0" max="360" step="10"' label="Rotate" %}
                 {% include modules/field.html id="controls-show-back-image" type="checkbox" label="Show Image (portrait only)" %}
+            </div>
+        </div>
+        <div class="columns">
+            <div class="columns-column-2">
+                {% include modules/field.html id="controls-rotate-back-image" type="number" attrs='min="0" max="360" step="10"' label="Rotate" %}
             </div>
         </div>
     </fieldset>

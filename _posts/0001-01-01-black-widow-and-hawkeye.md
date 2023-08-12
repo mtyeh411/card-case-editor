@@ -9,15 +9,15 @@ fields:
   card_color: "#ffffff"
   text_color: "#000000"
   font: "Back Issues"
-  title: "black widow"
-  title_size: 18
-  title_spacing: 0.02
+  spine_title: "black widow"
+  spine_title_size: 18
+  spine_title_spacing: 0.02
   cover: "/images/marvel_champions/black_widow/cover.jpg"
   logo: "/images/marvel_champions/black_widow/logo.jpg"
   back_image: "/images/marvel_champions/black_widow/silhouette.jpg"
   hide_cover: "true"
   full_cover: "true"
-  use_logo: "true"
+  show_lower_spine: "true"
   back_orientation: "portrait"
   show_back_image: "true"
   hide_headings: "true"
@@ -38,15 +38,15 @@ fields2:
   card_color: "#ffffff"
   text_color: "#000000"
   font: "Back Issues"
-  title: "hawkeye"
-  title_size: 18
-  title_spacing: 0.02
+  spine_title: "hawkeye"
+  spine_title_size: 18
+  spine_title_spacing: 0.02
   cover: "/images/marvel_champions/hawkeye/cover.jpg"
   logo: "/images/marvel_champions/hawkeye/logo.jpg"
   back_image: "/images/marvel_champions/hawkeye/silhouette.jpg"
   hide_cover: "true"
   full_cover: "true"
-  use_logo: "true"
+  show_lower_spine: "true"
   back_orientation: "portrait"
   show_back_image: "true"
   hide_headings: "true"

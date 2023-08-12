@@ -9,15 +9,15 @@ fields:
   card_color: "#ffffff"
   text_color: "#000000"
   font: "Back Issues"
-  title: "ant-man"
-  title_size: 18
-  title_spacing: 0.02
+  spine_title: "ant-man"
+  spine_title_size: 18
+  spine_title_spacing: 0.02
   cover: "/images/marvel_champions/ant_man/alt-cover2.jpg"
   logo: "/images/marvel_champions/ant_man/logo.jpg"
   back_image: "/images/marvel_champions/ant_man/silhouette.png"
   hide_cover: "true"
   full_cover: "true"
-  use_logo: "true"
+  show_lower_spine: "true"
   back_orientation: "portrait"
   show_back_image: "true"
   hide_headings: "true"
@@ -38,15 +38,15 @@ fields2:
   card_color: "#ffffff"
   text_color: "#000000"
   font: "Back Issues"
-  title: "wasp"
-  title_size: 18
-  title_spacing: 0.04
+  spine_title: "wasp"
+  spine_title_size: 18
+  spine_title_spacing: 0.04
   cover: "/images/marvel_champions/wasp/cover.jpg"
   logo: "/images/marvel_champions/wasp/logo.jpg"
   back_image: "/images/marvel_champions/wasp/silhouette.jpg"
   hide_cover: "true"
   full_cover: "true"
-  use_logo: "true"
+  show_lower_spine: "true"
   back_orientation: "portrait"
   show_back_image: "true"
   hide_headings: "true"

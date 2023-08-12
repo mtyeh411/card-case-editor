@@ -9,15 +9,15 @@ fields:
   card_color: "#ffffff"
   text_color: "#000000"
   font: "Back Issues"
-  title: "quicksilver"
-  title_size: 18
-  title_spacing: 0.015
+  spine_title: "quicksilver"
+  spine_title_size: 18
+  spine_title_spacing: 0.015
   cover: "/images/marvel_champions/quicksilver/cover.jpg"
   logo: "/images/marvel_champions/quicksilver/logo.jpg"
   back_image: "/images/marvel_champions/quicksilver/silhouette.jpg"
   hide_cover: "true"
   full_cover: "true"
-  use_logo: "true"
+  show_lower_spine: "true"
   back_orientation: "portrait"
   show_back_image: "true"
   hide_headings: "true"
@@ -38,15 +38,15 @@ fields2:
   card_color: "#ffffff"
   text_color: "#000000"
   font: "Back Issues"
-  title: "scarlet witch"
-  title_size: 18
-  title_spacing: 0.015
+  spine_title: "scarlet witch"
+  spine_title_size: 18
+  spine_title_spacing: 0.015
   cover: "/images/marvel_champions/scarlet_witch/cover.jpg"
   logo: "/images/marvel_champions/scarlet_witch/logo.jpg"
   back_image: "/images/marvel_champions/scarlet_witch/silhouette.jpg"
   hide_cover: "true"
   full_cover: "true"
-  use_logo: "true"
+  show_lower_spine: "true"
   back_orientation: "portrait"
   show_back_image: "true"
   hide_headings: "true"

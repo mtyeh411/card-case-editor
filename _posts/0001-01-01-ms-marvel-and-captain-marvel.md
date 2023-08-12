@@ -9,15 +9,15 @@ fields:
   card_color: "#ffffff"
   text_color: "#000000"
   font: "Back Issues"
-  title: "ms. marvel"
-  title_size: 18
-  title_spacing: 0.01
+  spine_title: "ms. marvel"
+  spine_title_size: 18
+  spine_title_spacing: 0.01
   cover: "/images/marvel_champions/ms_marvel/cover.jpg"
   logo: "/images/marvel_champions/ms_marvel/logo.png"
   back_image: "/images/marvel_champions/ms_marvel/silhouette.jpg"
   hide_cover: "true"
   full_cover: "true"
-  use_logo: "true"
+  show_lower_spine: "true"
   back_orientation: "portrait"
   show_back_image: "true"
   hide_headings: "true"
@@ -38,16 +38,16 @@ fields2:
   card_color: "#ffffff"
   text_color: "#000000"
   font: "Back Issues"
-  title: "captain marvel"
-  title_size: 18
-  title_spacing: 0.015
+  spine_title: "captain marvel"
+  spine_title_size: 18
+  spine_title_spacing: 0.015
   cover: "/images/marvel_champions/captain_marvel/cover.jpg"
   logo: "/images/marvel_champions/captain_marvel/logo.jpg"
   back_image: "/images/marvel_champions/captain_marvel/silhouette.jpg"
   back_size: 6.25
   hide_cover: "true"
   full_cover: "true"
-  use_logo: "true"
+  show_lower_spine: "true"
   back_orientation: "portrait"
   show_back_image: "true"
   hide_headings: "true"

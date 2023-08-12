@@ -9,15 +9,15 @@ fields:
   card_color: "#ffffff"
   text_color: "#000000"
   font: "Back Issues"
-  title: "spider-woman"
-  title_size: 18
-  title_spacing: 0.015
+  spine_title: "spider-woman"
+  spine_title_size: 18
+  spine_title_spacing: 0.015
   cover: "/images/marvel_champions/spider_woman/cover.jpg"
   logo: "/images/marvel_champions/spider_woman/logo.png"
   back_image: "/images/marvel_champions/spider_woman/silhouette.jpg"
   hide_cover: "true"
   full_cover: "true"
-  use_logo: "true"
+  show_lower_spine: "true"
   back_orientation: "portrait"
   show_back_image: "true"
   hide_headings: "true"

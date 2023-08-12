@@ -15,32 +15,44 @@ var jcard = (function() {
             forceCaps:        controls.querySelector('#controls-force-caps'),
 
             // front
+            /// image
             cover:            controls.querySelector('#controls-cover'),
-            showFrontText:    controls.querySelector('#controls-show-front-text'),
-            trackSize:        controls.querySelector('#controls-track-size'),
             fullCover:        controls.querySelector('#controls-full-bleed-cover'),
             cropCoverX:       controls.querySelector('#controls-crop-cover-x'),
             cropCoverY:       controls.querySelector('#controls-crop-cover-y'),
             fixedHeight:      controls.querySelector('#controls-fixed-height-cover'),
-
+            /// text
+            showFrontText:    controls.querySelector('#controls-show-front-text'),
             title:            controls.querySelector('#controls-title'),
             subtitle:         controls.querySelector('#controls-subtitle'),
             titleSize:        controls.querySelector('#controls-title-size'),
-            type:             controls.querySelector('#controls-type'),
-            typeSize:         controls.querySelector('#controls-type-size'),
+            //frontText:        controls.querySelector('#controls-front-text'),
+            titleSpacing:     controls.querySelector('#controls-title-spacing'),
+            frontTextSize:    controls.querySelector('#controls-front-text-size'),
 
             // spine
-            titleSpacing:     controls.querySelector('#controls-title-spacing'),
-
+            /// upper spine
+            upperSpine:       controls.querySelector('#controls-upper-spine'),
+            showUpperSpine:   controls.querySelector('#controls-show-upper-spine'),
+            spineTitle:            controls.querySelector('#controls-spine-title'),
+            spineSubtitle:         controls.querySelector('#controls-spine-subtitle'),
+            spineTitleSpacing:     controls.querySelector('#controls-spine-title-spacing'),
+            spineTitleSize:     controls.querySelector('#controls-spine-title-size'),
+            /// middle spine
             noteUpper:        controls.querySelector('#controls-note-upper'),
             noteLower:        controls.querySelector('#controls-note-lower'),
             noteSize:         controls.querySelector('#controls-note-size'),
-
-            logo:             controls.querySelector('#controls-logo'),
-            useLogo:          controls.querySelector('#controls-use-logo'),
-            rotateLogo:       controls.querySelector('#controls-rotate-logo'),
+            /// lower spine
+            lowerSpine:       controls.querySelector('#controls-lower-spine'),
+            showLowerSpine:   controls.querySelector('#controls-show-lower-spine'),
+            rotateLowerSpine:       controls.querySelector('#controls-rotate-lower-spine'),
 
             // back
+            /// image
+            backImage:        controls.querySelector('#controls-back-image'),
+            showBackImage:    controls.querySelector('#controls-show-back-image'),
+            backImageRotate:  controls.querySelector('#controls-rotate-back-image'),
+            /// text
             backPortrait:     controls.querySelector('#controls-back-portrait'),
             backLandscape:    controls.querySelector('#controls-back-landscape'),
             sideA:            controls.querySelector('#controls-side-a'),
@@ -48,10 +60,6 @@ var jcard = (function() {
             shortBack:        controls.querySelector('#controls-short-back'),
             hideHeadings:     controls.querySelector('#controls-hide-headings'),
             backSize:         controls.querySelector('#controls-back-size'),
-
-            backImage:        controls.querySelector('#controls-back-image'),
-            showBackImage:    controls.querySelector('#controls-show-back-image'),
-            backImageRotate:  controls.querySelector('#controls-rotate-back-image'),
         }
     }
 
@@ -61,34 +69,28 @@ var jcard = (function() {
             root:           template,
             boundaries:     template.querySelector('.template-boundaries'),
 
-            // images
-            cover:          template.querySelector('.template-cover'),
-            logo:           template.querySelector('.template-note-logo'),
-            backImage:      template.querySelector('.template-back-image'),
-
-            // titles
-            titleGroups:    [
-                template.querySelector('.template-front-title-group'),
-                template.querySelector('.template-spine-title-group')],
-            titles:         [
-                template.querySelector('.template-front-title'),
-                template.querySelector('.template-spine-title')],
-            subtitles:      [
-                template.querySelector('.template-front-subtitle'),
-                template.querySelector('.template-spine-subtitle')],
-
             // front
-            tracks:         template.querySelector('.template-tracks'),
-            type:           template.querySelector('.template-type'),
-            frontText:      template.querySelector('.template-front-group'),
+            cover:          template.querySelector('.template-cover'),
+            frontTitleGroup: template.querySelector('.template-front-title-group'),
+            frontTitle:     template.querySelector('.template-front-title'),
+            frontSubtitle:  template.querySelector('.template-front-subtitle'),
+            frontText:      template.querySelector('.template-front-text'),
+            frontTextGroup: template.querySelector('.template-front-group'),
 
             // spine
+            upperSpine:     template.querySelector('.template-upper-spine'),
+            upperSpineContainer:     template.querySelector('.template-upper-spine-container'),
+            spineTitleGroup: template.querySelector('.template-spine-title-group'),
+            spineTitle:     template.querySelector('.template-spine-title'),
+            spineSubtitle:  template.querySelector('.template-spine-subtitle'),
             noteGroup:      template.querySelector('.template-note-group'),
             noteUpper:      template.querySelector('.template-note-upper'),
             noteLower:      template.querySelector('.template-note-lower'),
+            lowerSpine:     template.querySelector('.template-lower-spine'),
 
             // back
             back:           template.querySelector('.template-back'),
+            backImage:      template.querySelector('.template-back-image'),
             sideA:          template.querySelector('.template-side-a'),
             sideB:          template.querySelector('.template-side-b')
         }
@@ -109,51 +111,53 @@ var jcard = (function() {
         addToggleListener(inputs.flip, outputs.root, 'is-flipped');
 
         // front
-        addVisibilityListener(inputs.showFrontText, outputs.frontText);
-        addSizeListener(inputs.trackSize, outputs.tracks);
+        /// image
         addToggleListener(inputs.fullCover, outputs.root, 'full-bleed-cover');
         addImageListener(inputs.cover, outputs.cover);
         addCropListener(inputs.cropCoverX, outputs.cover, 'x');
         addCropListener(inputs.cropCoverY, outputs.cover, 'y');
         addToggleListener(inputs.fixedHeight, outputs.cover, 'has-fixed-height');
-        addTextListener(inputs.type, outputs.type);
-        addSizeListener(inputs.typeSize, outputs.type);
+        /// text
+        addTextListener(inputs.title, outputs.frontTitle);
+        addTextListener(inputs.subtitle, outputs.frontSubtitle);
+        addLetterSpacingListener(inputs.titleSpacing, outputs.frontTitle);
+        addSizeListener(inputs.titleSize, outputs.frontTitleGroup);
+        addVisibilityListener(inputs.showFrontText, outputs.frontTextGroup);
+        addSizeListener(inputs.frontTextSize, outputs.frontText);
+        //addTextListener(inputs.frontText, outputs.frontText);
 
         // spine
-        addVisibilityListener(inputs.useLogo, outputs.logo);
-        addImageListener(inputs.logo, outputs.logo);
-        addRotationListener(inputs.rotateLogo, outputs.logo);
+        /// upper spine
+        addVisibilityListener(inputs.showUpperSpine, outputs.upperSpineContainer);
+        addImageListener(inputs.upperSpine, outputs.upperSpine);
+        addTextListener(inputs.spineTitle, outputs.spineTitle);
+        addTextListener(inputs.spineSubtitle, outputs.spineSubtitle);
+        addLetterSpacingListener(inputs.spineTitleSpacing, outputs.spineTitle);
+        addSizeListener(inputs.spineTitleSize, outputs.spineTitleGroup);
+        /// middle spine
         addTextListener(inputs.noteUpper, outputs.noteUpper);
         addTextListener(inputs.noteLower, outputs.noteLower);
         addSizeListener(inputs.noteSize, outputs.noteGroup);
+        /// lower spine
+        addVisibilityListener(inputs.showLowerSpine, outputs.lowerSpine);
+        addImageListener(inputs.lowerSpine, outputs.lowerSpine);
+        addRotationListener(inputs.rotateLowerSpine, outputs.lowerSpine);
 
         // back
+        /// image
+        addImageListener(inputs.backImage, outputs.backImage);
+        addRotationListener(inputs.backImageRotate, outputs.backImage);
+        addVisibilityListener(inputs.showBackImage, outputs.backImage);
+        /// text
         addToggleListener(inputs.shortBack, outputs.root, 'short-back');
         addToggleListener(inputs.hideHeadings, outputs.back, 'hide-headings');
         addSideListener(inputs.sideA, outputs.sideA);
         addSideListener(inputs.sideB, outputs.sideB);
-        addTracksListener([inputs.sideA, inputs.sideB], outputs.tracks);
+        addTracksListener([inputs.sideA, inputs.sideB], outputs.frontText);
         addSizeListener(inputs.backSize, outputs.sideA);
         addSizeListener(inputs.backSize, outputs.sideB);
-        addImageListener(inputs.backImage, outputs.backImage);
-        addRotationListener(inputs.backImageRotate, outputs.backImage);
-        addVisibilityListener(inputs.showBackImage, outputs.backImage);
         addToggleListener(inputs.backPortrait, outputs.back, 'is-portrait', ['is-landscape']);
         addToggleListener(inputs.backLandscape, outputs.back, 'is-landscape', ['is-portrait'])
-
-        // titles
-        outputs.titles.forEach(function(titleOutput) {
-            addLetterSpacingListener(inputs.titleSpacing, titleOutput);
-        });
-        outputs.titles.forEach(function(titleOutput) {
-            addTextListener(inputs.title, titleOutput);
-        });
-        outputs.subtitles.forEach(function(subtitleOutput) {
-            addTextListener(inputs.subtitle, subtitleOutput);
-        });
-        outputs.titleGroups.forEach(function(groupOutput) {
-            addSizeListener(inputs.titleSize, groupOutput);
-        });
     }
 
     // populate inputs with field values or defaults
@@ -165,24 +169,32 @@ var jcard = (function() {
         inputs.flip.checked = fields.flipped !== undefined ? fields.flipped : false;
 
         // front
-        inputs.title.value = fields.title || '';
-        inputs.subtitle.value = fields.subtitle || '';
-        inputs.titleSize.value = fields.title_size || 12;
-        inputs.type.value = fields.type || '';
-        inputs.typeSize.value = fields.type_size || 10;
+        /// image
         inputs.fullCover.checked = fields.full_cover !== undefined ? fields.full_cover : false;
-        inputs.showFrontText.checked = fields.show_front_text !== undefined ? fields.show_front_text : false;
-        inputs.titleSpacing.value = fields.title_spacing || 0;
-        inputs.trackSize.value = fields.track_size || 9;
         inputs.cropCoverX.value = fields.crop_cover_x || 0;
         inputs.cropCoverY.value = fields.crop_cover_y || 0;
         inputs.fixedHeight.checked = fields.fixed_height !== undefined ? fields.fixed_height : false;
+        /// text
+        inputs.title.value = fields.title || '';
+        inputs.subtitle.value = fields.subtitle || '';
+        inputs.titleSize.value = fields.title_size || 12;
+        //inputs.frontText.value = fields.front_text || '';
+        inputs.frontTextSize.value = fields.front_text_size || 10;
+        inputs.showFrontText.checked = fields.show_front_text !== undefined ? fields.show_front_text : false;
+        inputs.titleSpacing.value = fields.title_spacing || 0;
 
         // spine
+        /// upper spine
+        inputs.showUpperSpine.checked = fields.show_upper_spine !== undefined ? fields.show_upper_spine : false;
+        inputs.spineTitle.value = fields.spine_title || '';
+        inputs.spineSubtitle.value = fields.spine_subtitle || '';
+        inputs.spineTitleSize.value = fields.spine_title_size || 12;
+        /// middle spine
         inputs.noteUpper.value = fields.note_upper || '';
         inputs.noteLower.value = fields.note_lower || '';
         inputs.noteSize.value = fields.note_size || 10;
-        inputs.useLogo.checked = fields.use_logo !== undefined ? fields.use_logo : false;
+        /// lower spine
+        inputs.showLowerSpine.checked = fields.show_lower_spine !== undefined ? fields.show_lower_spine : false;
 
         // back
         inputs.shortBack.checked = fields.short_back !== undefined ? fields.short_back : false;

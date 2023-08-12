@@ -9,15 +9,15 @@ fields:
   card_color: "#ffffff"
   text_color: "#000000"
   font: "Back Issues"
-  title: "hulk"
-  title_size: 18
-  title_spacing: 0.04
+  spine_title: "hulk"
+  spine_title_size: 18
+  spine_title_spacing: 0.04
   cover: "/images/marvel_champions/hulk/cover.jpg"
   logo: "/images/marvel_champions/hulk/logo.webp"
   back_image: "/images/marvel_champions/hulk/silhouette.jpg"
   hide_cover: "true"
   full_cover: "true"
-  use_logo: "true"
+  show_lower_spine: "true"
   back_orientation: "portrait"
   show_back_image: "true"
   hide_headings: "true"
@@ -37,15 +37,15 @@ fields2:
   card_color: "#ffffff"
   text_color: "#000000"
   font: "Back Issues"
-  title: "she-hulk"
-  title_size: 18
-  title_spacing: 0.02
+  spine_title: "she-hulk"
+  spine_title_size: 18
+  spine_title_spacing: 0.02
   cover: "/images/marvel_champions/she_hulk/cover.png"
   logo: "/images/marvel_champions/she_hulk/logo.webp"
   back_image: "/images/marvel_champions/she_hulk/silhouette.jpg"
   hide_cover: "true"
   full_cover: "true"
-  use_logo: "true"
+  show_lower_spine: "true"
   back_orientation: "portrait"
   show_back_image: "true"
   hide_headings: "true"
