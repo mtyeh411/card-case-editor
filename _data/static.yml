@@ -10,6 +10,9 @@ fonts:
   - name: Back Issues
     path: /fonts/BackIssuesBB_reg.otf
     format: opentype
+  - name: CC Wild Words
+    path: /fonts/CCWildWordsLower-Regular.woff
+    format: woff
   - name: Alte Haas Grotesk
     path: /fonts/alte-haas-grotesk.ttf
     format: truetype

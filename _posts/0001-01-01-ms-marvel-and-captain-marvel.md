@@ -42,7 +42,7 @@ fields2:
   spine_title_size: 18
   spine_title_spacing: 0.015
   cover: "/images/marvel_champions/captain_marvel/cover.jpg"
-  logo: "/images/marvel_champions/captain_marvel/logo.jpg"
+  logo: "/images/marvel_champions/captain_marvel/logo.png"
   back_image: "/images/marvel_champions/captain_marvel/silhouette.jpg"
   back_size: 6.25
   hide_cover: "true"

@@ -13,7 +13,7 @@ fields:
   spine_title_size: 18
   spine_title_spacing: 0.02
   cover: "/images/marvel_champions/spider_man/cover.jpg"
-  logo: "/images/marvel_champions/spider_man/logo.jpg"
+  logo: "/images/marvel_champions/tribes/web_warrior.png"
   back_image: "/images/marvel_champions/spider_man/silhouette.jpg"
   hide_cover: "true"
   full_cover: "true"

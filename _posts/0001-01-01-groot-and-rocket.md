@@ -13,7 +13,7 @@ fields:
   spine_title_size: 18
   spine_title_spacing: 0.015
   cover: "/images/marvel_champions/groot/cover.jpg"
-  logo: "/images/marvel_champions/groot/logo.png"
+  logo: "/images/marvel_champions/tribes/guardians.png"
   back_image: "/images/marvel_champions/groot/silhouette.png"
   hide_cover: "true"
   full_cover: "true"
@@ -43,7 +43,7 @@ fields2:
   spine_title_size: 18
   spine_title_spacing: 0.015
   cover: "/images/marvel_champions/rocket_raccoon/cover.jpg"
-  logo: "/images/marvel_champions/rocket_raccoon/logo.png"
+  logo: "/images/marvel_champions/tribes/guardians.png"
   back_image: "/images/marvel_champions/rocket_raccoon/silhouette.png"
   hide_cover: "true"
   full_cover: "true"

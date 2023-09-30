@@ -26,7 +26,7 @@ layout: base
 
 <div id="jcard" class="jcard extra-gum">
     <div class="jcard-preview">
-        {% include modules/template.html type="extra-gum" cover=page.fields.cover logo=page.fields.logo back_image=page.fields.back_image %}
+        {% include modules/template.html type="extra-gum" cover=page.fields.cover logo=page.fields.logo back_image=page.fields.back_image upper_spine=page.fields.upper_spine %}
     </div>
     <div class="jcard-duplicate"></div>
     <div class="jcard-controls">
@@ -35,7 +35,7 @@ layout: base
 </div>
 <div id="jcard2" class="jcard">
     <div class="jcard-preview">
-        {% include modules/template.html type="extra-gum" cover=page.fields2.cover logo=page.fields2.logo back_image=page.fields2.back_image %} </div>
+        {% include modules/template.html type="extra-gum" cover=page.fields2.cover logo=page.fields2.logo back_image=page.fields2.back_image upper_spine=page.fields2.upper_spine %} </div>
     <div class="jcard-duplicate"></div>
     <div class="jcard-controls">
         {% include modules/controls.html %}

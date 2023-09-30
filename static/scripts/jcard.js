@@ -71,6 +71,7 @@ var jcard = (function() {
 
             // front
             cover:          template.querySelector('.template-cover'),
+            coverContainer: template.querySelector('.template-cover-container'),
             frontTitleGroup: template.querySelector('.template-front-title-group'),
             frontTitle:     template.querySelector('.template-front-title'),
             frontSubtitle:  template.querySelector('.template-front-subtitle'),
@@ -116,7 +117,7 @@ var jcard = (function() {
         addImageListener(inputs.cover, outputs.cover);
         addCropListener(inputs.cropCoverX, outputs.cover, 'x');
         addCropListener(inputs.cropCoverY, outputs.cover, 'y');
-        addToggleListener(inputs.fixedHeight, outputs.cover, 'has-fixed-height');
+        addToggleListener(inputs.fixedHeight, outputs.coverContainer, 'has-fixed-height');
         /// text
         addTextListener(inputs.title, outputs.frontTitle);
         addTextListener(inputs.subtitle, outputs.frontSubtitle);
@@ -167,6 +168,7 @@ var jcard = (function() {
         inputs.cardColor.value = fields.card_color || 'white';
         inputs.textColor.value = fields.text_color || 'black';
         inputs.flip.checked = fields.flipped !== undefined ? fields.flipped : false;
+        inputs.forceCaps.checked = false; //fields.force_caps !== undefined ? fields.force_caps : false;
 
         // front
         /// image

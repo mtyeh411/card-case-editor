@@ -2,7 +2,9 @@
     Blank j-card template
 
     Parameters:
-        cover:  cover image path
+        cover:  front cover image path
+        back_image: back cover image path
+        upper_spine: upper spine image path
     Requires:
         var:    site.baseurl
         data:   site.data.static.root           # static asset root
@@ -32,7 +34,7 @@
 
     <div class="template-spine">
         <div class="template-upper-spine-container">
-          <img class="template-upper-spine" src="{{ site.baseurl }}{{ static.root }}{{ upper_spine }}" alt="Upper Spine" />
+          <img class="template-upper-spine" src="{{ site.baseurl }}{{ static.root }}{{upper_spine}}" alt="Upper Spine" />
         </div>
         <div class="template-spine-title-group">
             <div class="template-spine-title"></div>
@@ -46,7 +48,9 @@
     </div>
 
     <div class="template-front">
-        <img class="template-cover" src="{{ site.baseurl }}{{ static.root }}{{ cover }}" alt="Cover image" />
+        <div class="template-cover-container">
+          <img class="template-cover" src="{{ site.baseurl }}{{ static.root }}{{ cover }}" alt="Cover image" />
+        </div>
         <div class="template-front-group">
             <div class="template-front-title-group">
                 <div class="template-front-title"></div>
